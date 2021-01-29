@@ -1,10 +1,10 @@
-var url = window.location.href;
+// var url = window.location.href;
 var swLocation = "/Twittor/js/sw-utils.js";
 
 
-if (url.includes('localhost')) {
-    swLocation = '/js/sw-utils.js';
-}
+// if (url.includes('localhost')) {
+//     swLocation = '/js/sw-utils.js';
+// }
 
 
 importScripts(swLocation);
