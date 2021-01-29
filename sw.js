@@ -1,11 +1,20 @@
-importScripts('js/sw-utils.js');
+var url = window.location.href;
+var swLocation = "/Twittor/js/sw-utils.js";
+
+
+if (url.includes('localhost')) {
+    swLocation = '/js/sw-utils.js';
+}
+
+
+importScripts(swLocation);
 
 const STATIC_CACHE = 'static-v9';
 const DYNAMIC_CACHE = 'dynamic-v1';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
 const APP_SHELL = [
-    '/',
+    // '/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
